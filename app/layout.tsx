@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PROTECTED APP",
-  description: "PROTECTED APP",
+  title: "GMS lampung",
+  description:
+    "Welcome to GMS Lampung, a church community that grows together in faith and love.",
 };
 
 export default function RootLayout({
