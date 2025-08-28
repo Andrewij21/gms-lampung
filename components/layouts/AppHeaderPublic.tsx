@@ -4,7 +4,7 @@ import NavLinks from "../shared/NavLinkButton";
 
 function AppHeaderPublic() {
   return (
-    <header className="flex justify-between items-center py-6 px-32 top-0 mx-auto fixed w-full scr">
+    <header className="flex justify-between items-center py-6 px-32 top-0 mx-auto fixed w-full z-50">
       <Image src="/logo.png" alt="Logo" width={100} height={100} className="" />
       <div className="text-white">
         <ul className="flex ">
