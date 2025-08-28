@@ -53,7 +53,10 @@ export default function Schedule() {
 
 export function ScheduleCard() {
   return (
-    <motion.div className="flex items-center gap-4" variants={itemVariants}>
+    <motion.div
+      className="flex items-center gap-4 border-b-2 pb-4"
+      variants={itemVariants}
+    >
       <p className="font-medium">
         <span className="font-bold text-3xl block">20</span>
         JUN,2025
