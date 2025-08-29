@@ -5,8 +5,8 @@ import BannerCG from "@/components/landing/BannerCG";
 import Blogs from "@/components/landing/Blogs";
 import Hero from "@/components/landing/Hero";
 import Schedule from "@/components/landing/Schedule";
+import AppFooter from "@/components/layouts/AppFooter";
 import AppHeaderPublic from "@/components/layouts/AppHeaderPublic";
-import { Church } from "lucide-react";
 export default function Home() {
   return (
     <div className="min-h-screen relative">
@@ -17,6 +17,7 @@ export default function Home() {
       <Schedule />
       <Blogs />
       <Address />
+      <AppFooter />
     </div>
   );
 }

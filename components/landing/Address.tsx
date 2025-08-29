@@ -2,7 +2,7 @@ import { Church } from "lucide-react";
 
 export default function Address() {
   return (
-    <section className="py-12">
+    <section className="py-24">
       <div className="container flex justify-between items-center mx-auto">
         <div className="text-center">
           <Church className="text-accent size-24 block mx-auto" />
