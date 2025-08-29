@@ -10,7 +10,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 export default function Blogs() {
   return (
-    <section className="min-h-screen space-y-12">
+    <section className="space-y-12 py-12">
       <div className="text-center">
         <h1 className="text-xl font-medium">Our Blogs</h1>
         <p className="text-6xl font-bold">GMS lampung life</p>
