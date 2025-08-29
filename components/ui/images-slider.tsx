@@ -85,7 +85,7 @@ export const ImagesSlider = ({
 
   const slideVariants = {
     initial: {
-      scale: 0,
+      scale: 1,
       opacity: 0,
       // rotateX: 45,
     },
