@@ -21,7 +21,7 @@ export default function Blogs() {
             delay: 2000,
           }),
         ]}
-        className="container mx-auto"
+        className="px-0 sm:px-12 container mx-auto"
         opts={{
           align: "start",
           loop: true,
@@ -52,8 +52,8 @@ export default function Blogs() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="!top-1/3 !-translate-y-1/2 !left-2 sm:-left-14 " />
+        <CarouselNext className="!top-1/3 !right-2 sm:-right-12" />
       </Carousel>
     </section>
   );
