@@ -1,8 +1,18 @@
 "use client";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import { TypewriterEffect } from "../ui/typewriter-effect";
 
 export default function BannerCG() {
+  const words =
+    "Join our Connect Group <br/> a place to share life, grow in faith, and build friendships."
+      .split(" ")
+      .map((word) => {
+        return {
+          text: word,
+          className: "text-white",
+        };
+      });
   return (
     <motion.section
       className="bg-primary py-14"
@@ -15,14 +25,16 @@ export default function BannerCG() {
       <div className="flex flex-col md:flex-row justify-between items-center container mx-auto gap-4">
         {/* Animate the heading with a slight delay. */}
         <motion.h1
-          className="text-4xl text-white flex-1 font-semibold text-center md:text-left"
+          className=""
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          Join our Connect Group <br className="hidden md:block" /> a place to
-          share life, grow in faith, and build friendships.
+          <TypewriterEffect
+            words={words}
+            className="max-w-screen-md text-4xl text-white flex-1 font-semibold text-center md:text-left leading-snug"
+          />
         </motion.h1>
         {/* Animate the button with a greater delay to appear after the text. */}
         <motion.div
