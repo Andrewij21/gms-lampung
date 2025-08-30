@@ -2,48 +2,41 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import TextHighlight from "@/components/shared/TextHighlight";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { BackgroundBeams } from "../ui/background-beams";
 
 export default function About() {
   return (
-    <motion.section
-      className="pt-6 pb-28"
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="flex flex-col justify-center items-center container mx-auto space-y-4 h-[40rem] z-20 relative">
-        <div className="rounded-full bg-black w-fit px-6 py-14">
+    <motion.section viewport={{ amount: 0.11 }} className="relative">
+      <motion.div className="flex flex-col justify-center items-center container mx-auto  z-20 relative">
+        <motion.div
+          className="rounded-full bg-black w-fit px-6 py-14 "
+          initial={{ opacity: 0, y: -80 }}
+          whileInView={{ opacity: 1, y: -80 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.6 }}
+        >
           <Image
             src="/logo.png"
             alt="Logo"
             width={100}
             height={100}
-            className="fill-black"
+            className="fill-black object-cover object-center"
           />
-        </div>
-        <motion.h1
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: [20, -5, 0],
-          }}
-          transition={{
-            duration: 0.5,
-            ease: [0.4, 0.0, 0.2, 1],
-          }}
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-accent dark:text-white leading-relaxed lg:leading-snug text-center mx-auto "
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, y: -50 }}
+          transition={{ duration: 0.8 }}
         >
-          GMS Lampung adalah rumah rohani bagi setiap generasi, tempat kita
-          bertumbuh dalam iman, mengalami kasih Kristus, dan menemukan
-          pengharapan sejati untuk menghadapi setiap tantangan <br />{" "}
-          <TextHighlight className="text-white">
-            hidup dengan iman
-          </TextHighlight>
-        </motion.h1>
-        <div className="w-full">
+          <TextGenerateEffect
+            className="text-2xl md:text-3xl lg:text-5xl font-bold text-accent dark:text-white leading-relaxed lg:leading-snug text-center mx-auto "
+            words="Rumah Rohani untuk Setiap Generasi.
+Tempat kita bertumbuh dalam iman, mengalami kasih Kristus, dan menemukan harapan sejati untuk setiap langkah hidup."
+          />
+        </motion.div>
+
+        <div className="w-full z-50 px-4">
           <HoverEffect
             items={[
               {
@@ -72,7 +65,8 @@ export default function About() {
             ]}
           />
         </div>
-      </div>
+      </motion.div>
+      <BackgroundBeams />
     </motion.section>
   );
 }
