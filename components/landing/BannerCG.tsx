@@ -15,17 +15,16 @@ export default function BannerCG() {
       });
   return (
     <motion.section
-      className="bg-primary py-14"
-      // Animation triggers when the section is in view.
+      className="bg-primary py-8"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true, amount: 0.5 }}
     >
-      <div className="flex flex-col md:flex-row justify-between items-center container mx-auto gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-center container mx-auto gap-4 min-h-50 self-start">
         {/* Animate the heading with a slight delay. */}
         <motion.h1
-          className=""
+          className="self-start"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
